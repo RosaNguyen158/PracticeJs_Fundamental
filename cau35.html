@@ -1,0 +1,14 @@
+<html>
+  <div>
+    35. Write a JavaScript program to get an array of given n random integers in
+    the specified range.
+  </div>
+  <script>
+    const randomFunc = (min, max, n = 1) =>
+      Array.from(
+        { length: n },
+        () => Math.floor(Math.random() * (max - min + 1)) + min
+      );
+    console.log(randomFunc(1, 20, 10)); // ex:[7, 9, 1, 6, 7, 4, 9, 18, 10, 14]
+  </script>
+</html>

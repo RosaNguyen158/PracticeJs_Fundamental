@@ -1,0 +1,19 @@
+<html>
+  <div>
+    **42. Write a JavaScript program to get a customized coalesce function that
+    returns the first argument that returns true from the provided argument
+    validation function.**
+  </div>
+  <script>
+    let val = (arr) =>
+      arr.filter((value) => {
+        value == (NaN | null | undefined | "");
+        return value;
+      });
+
+    function findTrue(...args) {
+      return val(args);
+    }
+    console.log(findTrue(undefined, null, NaN, "", "Waldo"));
+  </script>
+</html>

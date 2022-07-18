@@ -1,0 +1,11 @@
+<html>
+  <div>
+    26. Write a JavaScript program that will return true if the string is y/yes
+    or false if the string is n/no.
+  </div>
+  <script>
+    const YesNo = (str, def = "false") =>
+      /^(y|Yes)$/i.test(str) ? true : /^(n|No)$/i.test(str) ? false : def;
+    console.log(YesNo("n"));
+  </script>
+</html>

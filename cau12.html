@@ -1,0 +1,10 @@
+<html>
+  <div>
+    12. Write a JavaScript program to removes non-printable ASCII characters
+    from a given string.
+  </div>
+  <script>
+    const removeNonASCII = (str) => str.replace(/[^\x20-\x7E]/g, "");
+    alert(removeNonASCII("äÄçÇéÉêlorem-ipsumöÖÐþúÚ")); // 'lorem-ipsum'
+  </script>
+</html>

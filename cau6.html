@@ -1,0 +1,35 @@
+<html>
+  <div>
+    6. Write a JavaScript program to target a given value in a nested JSON
+    object, based on the given key.
+  </div>
+  <script>
+    const obj = {
+      prop: [
+        {
+          key: "FOO",
+          value: "Foo is wonderfull, foo is great",
+        },
+        {
+          key: "BAR",
+          value: "Bar is bad, really bad",
+        },
+      ],
+    };
+    const findByKey = (obj, key) => {
+      const arr = obj["prop"];
+      console.log(arr);
+      if (arr.length) {
+        const result = arr.filter((el) => {
+          return el["key"] === key;
+        });
+        if (result && result.length) {
+          return result[0].value;
+        } else {
+          return "";
+        }
+      }
+    };
+    console.log(findByKey(obj, "BAR"));
+  </script>
+</html>

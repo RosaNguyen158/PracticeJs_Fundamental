@@ -1,0 +1,23 @@
+<html>
+  <div>
+    32. Write a JavaScript program to get the sum of a given array, after
+    mapping each element to a value using the provided function.
+  </div>
+  <script>
+    function sumBy(arr, func) {
+      let result = arr
+        .map(typeof func === "function" ? func : (val) => val[func])
+        .reduce(function (acc, val) {
+          console.log("aaa " + val);
+          let a = acc + val;
+          return a;
+        }, 0);
+      return result;
+    }
+
+    console.log(
+      sumBy([{ n: 4 }, { n: 2 }, { n: 8 }, { n: 6 }], (o) => o.n + 2)
+    ); // 28
+    console.log(sumBy([{ n: -4 }, { n: -2 }, { n: 8 }, { n: 6 }], "n"));
+  </script>
+</html>

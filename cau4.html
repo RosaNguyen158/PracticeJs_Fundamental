@@ -1,0 +1,34 @@
+<html>
+  <div>
+    4. Write a JavaScript program to convert a comma-separated values (CSV)
+    string to a 2D array of objects. The first row of the string is used as the
+    title row.
+  </div>
+  <script>
+    let arr = "Name,Roll Number\nRohan,01\nAryan,02";
+    function ArrrayToObj(arr, delimiter = ",") {
+      const titles = arr.slice(0, arr.indexOf("\n")).split(delimiter); // first row title
+      console.log(titles);
+      const rowValue = arr.slice(arr.indexOf("\n") + 1).split("\n");
+      console.log("rowvalue " + rowValue);
+
+      const ObjTitle = rowValue.map(function (v) {
+        const value = v.split(delimiter);
+        console.log("value: " + value);
+        const titleObj = titles.reduce(function (obj, item, index) {
+          // covert to 2D
+          console.log("title: " + item + "  values[index]: " + value[index]);
+          obj[item] = value[index];
+          return obj;
+          console.log(obj);
+        }, {});
+        return titleObj;
+      });
+      return ObjTitle;
+    }
+    console.log(ArrrayToObj("Name,Roll Number\nRohan,01\nAryan,02"));
+
+    // 0: {Name: 'Rohan', Roll Number: '01'}
+    // 1: {Name: 'Aryan', Roll Number: '02'}
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <div>
+    43. Write a JavaScript program to change function that accepts an array into
+    a variadic function.
+  </div>
+  <script>
+    const filterFunc = (...arr) => {
+      let arr1 = arr.map((value) =>
+        value.filter((value) => {
+          value != (NaN | null | undefined | "" | false | 0 | -0);
+          return value;
+        })
+      );
+      return arr1;
+    };
+
+    const func2 = filterFunc.bind(this);
+
+    const p1 = [undefined, null, NaN, "", "Waldo"];
+    const p2 = [0, "yayy", "Waldo"];
+
+    console.log(func2(p1, p2));
+  </script>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <div>
+    28. Write a JavaScript program to measure the time taken by a function to
+    execute.
+  </div>
+  <script>
+    let obj = {
+      for: 1,
+      let: 2,
+      return: 3,
+      var: 4,
+    };
+    let startTime = performance.now();
+
+    Object.keys(obj).map((value) => console.log(obj[value]));
+
+    let endTime = performance.now();
+
+    console.log(`Call to doSomething took ${endTime - startTime} milliseconds`);
+  </script>
+</html>

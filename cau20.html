@@ -1,0 +1,21 @@
+<html>
+  <div>
+    20. Write a JavaScript program to extend a 3-digit color code to a 6-digit
+    color code.
+  </div>
+  <script>
+    let digit = "#39E";
+
+    digit = digit
+      .split("")
+      .map((item) => {
+        if (item == "#") {
+          return item;
+        }
+        return item + item;
+      })
+      .join("");
+
+    console.log(digit);
+  </script>
+</html>

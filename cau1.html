@@ -1,0 +1,20 @@
+<html>
+  <div>
+    //1. Write a JavaScript program to compare two objects to determine if the
+    first one contains equivalent property values to the second one.
+  </div>
+  <script>
+    //1. Write a JavaScript program to compare two objects to determine if the first one contains equivalent property values to the second one.
+    let o1 = { name: "alan", age: 18 };
+    let o2 = { name: "alan", age: 18, color: "pink" };
+    function checkobj(o1, o2) {
+      for (let key in o2) {
+        if (o1[key] !== o2[key]) {
+          return false;
+        }
+      }
+      return true;
+    }
+    alert(checkobj(o1, o2));
+  </script>
+</html>

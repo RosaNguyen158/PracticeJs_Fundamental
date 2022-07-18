@@ -1,0 +1,28 @@
+<html>
+  <div>
+    41. Write a JavaScript program to create an object from the given key-value
+    pairs.
+  </div>
+  <script>
+    function ObjtoArr(arr) {
+      const obj1 = arr
+        .map((value) => value)
+        .reduce((obj, val, key) => {
+          console.log(key);
+          obj[key] = val.reduce((obj2, value, index) => {
+            obj2[index] = value;
+            return obj2;
+          }, {});
+          return obj;
+        }, {});
+      return obj1;
+    }
+
+    console.log(
+      ObjtoArr([
+        ["a", 1],
+        ["b", 2],
+      ])
+    );
+  </script>
+</html>

@@ -1,0 +1,19 @@
+<html>
+  <div>
+    13. Write a JavaScript program to convert the length of a given string in
+    bytes.
+  </div>
+  <script>
+    const len = (str) => {
+      let size = new Blob([str]).size;
+      return size;
+    };
+
+    // const len = (str) => {
+    //   let size = str.length;
+    //   return size;
+    // };
+
+    alert(len("fjdsfb"));
+  </script>
+</html>

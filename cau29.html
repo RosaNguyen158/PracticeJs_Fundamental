@@ -1,0 +1,14 @@
+<html>
+  <div>
+    29. Write a JavaScript program to convert a value to a safe integer.
+  </div>
+  <script>
+    const safeInt_func = (input) => {
+      var mini = Math.min(input, Number.MAX_SAFE_INTEGER);
+      var maxi = Math.max(mini, Number.MIN_SAFE_INTEGER);
+      const safeInt = Math.round(maxi);
+      return safeInt;
+    };
+    console.log(safeInt_func(Infinity));
+  </script>
+</html>

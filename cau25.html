@@ -1,0 +1,17 @@
+<html>
+  <div>
+    25. Write a JavaScript program to create a new array out of the two supplied
+    by creating each possible pair from the arrays.
+  </div>
+  <script>
+    function combine2arr(arr, arr2) {
+      const arrMix = arr.reduce(function (a, v) {
+        let b = a.concat(arr2.map((r) => [v, r]));
+        return b;
+      }, []);
+      return arrMix;
+    }
+
+    console.log(combine2arr([1, 2], [1, 2])); // [1,1], [1,2], [2,1], [2,2]
+  </script>
+</html>

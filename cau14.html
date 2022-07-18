@@ -1,0 +1,21 @@
+<html>
+  <div>
+    14. Write a JavaScript program to replace the names of multiple object keys
+    with the values provided. bytes.
+  </div>
+  <script>
+    let object = {
+      name: "Hello",
+      age: 20,
+      gender: "Male",
+    };
+
+    let renmeObjectKey = (object) => {
+      object.FirstName = object.name;
+      object.currentAge = object.age;
+      delete object.name;
+      delete object.age;
+    };
+    alert(renmeObjectKey(object));
+  </script>
+</html>

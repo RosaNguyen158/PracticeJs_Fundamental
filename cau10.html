@@ -1,0 +1,17 @@
+<html>
+  <div>
+    10. Write a JavaScript program to extract out the values at the specified
+    indexes from a specified array.
+  </div>
+  <script>
+    const pull_at_Index = (arr, pullArr) => {
+      let removed = [];
+      let pulled = arr.map((v, i) =>
+        pullArr.includes(i) ? removed.push(v) : v
+      );
+      return removed;
+    };
+    let arra1 = ["a", "b", "c", "d", "e", "f"];
+    alert(pull_at_Index(arra1, [1, 3])); // b,d
+  </script>
+</html>

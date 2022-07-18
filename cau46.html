@@ -1,0 +1,13 @@
+<html>
+  <div>46. Write a JavaScript program to curry (curries) a function.</div>
+  <script>
+    function discount(percent) {
+      return (price) => {
+        return price * percent;
+      };
+    }
+    const calDiscount = discount(0.1);
+    const calPrice = calDiscount(500);
+    console.log(calPrice);
+  </script>
+</html>

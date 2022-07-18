@@ -1,0 +1,24 @@
+<html>
+  <div>
+    39. Write a JavaScript program to remove the key-value pairs corresponding
+    to the given keys from an object.
+  </div>
+  <script>
+    function delKey(obj, str) {
+      const obj3 = Object.keys(obj)
+        .filter((key) => key != str)
+        .reduce((obj2, key) => {
+          obj2[key] = obj[key];
+          return obj2;
+        }, {});
+      return obj3;
+    }
+
+    const Employee = {
+      firstname: "John",
+      lastname: "Doe",
+    };
+
+    console.log(delKey(Employee, "firstname"));
+  </script>
+</html>

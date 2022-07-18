@@ -1,0 +1,14 @@
+<html>
+  <div>
+    44. Write a JavaScript program to remove falsey values from a given array.
+  </div>
+  <script>
+    function newArr(arr) {
+      let arr1 = arr.filter(
+        (value) => value != (NaN | null | undefined | "" | false | 0 | -0)
+      );
+      return arr1;
+    }
+    console.log(newArr([1, 4, 6, 0, 5])); // LOẠI 0
+  </script>
+</html>

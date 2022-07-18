@@ -1,0 +1,21 @@
+<html>
+  <div>
+    40. Write a JavaScript program to create an array of key-value pair arrays
+    from a given object.
+  </div>
+  <script>
+    function ObjtoArr(obj) {
+      const arr1 = Object.keys(obj).reduce((arr, key) => {
+        arr.push(obj);
+        return arr;
+      }, []);
+      return arr1;
+    }
+
+    console.log(ObjtoArr({ a: 1, b: "2", c: 3 }));
+    //(3) [{…}, {…}, {…}]
+    //0: {a: 1, b: '2', c: 3}
+    //1: {a: 1, b: '2', c: 3}
+    //2: {a: 1, b: '2', c: 3}
+  </script>
+</html>

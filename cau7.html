@@ -1,0 +1,15 @@
+<html>
+  <div>
+    7. Write a JavaScript program to converts a specified number to an array of
+    digits.
+  </div>
+  <script>
+    let num = 235345;
+    let myArr = String(num)
+      .split("")
+      .map((num) => {
+        return Number(num);
+      });
+    alert(myArr); // [2,3,5,3,4,5]
+  </script>
+</html>

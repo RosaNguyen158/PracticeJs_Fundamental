@@ -1,0 +1,13 @@
+<html>
+  <div>
+    30. Write a JavaScript program to filter out the element(s) of a given
+    array, that have one of the specified values.
+  </div>
+  <script>
+    function filArr(arr, ...arg) {
+      let arr2 = arr.filter((index) => !arg.includes(index));
+      return arr2;
+    }
+    console.log(filArr([1, 2, 3, 6], 6));
+  </script>
+</html>

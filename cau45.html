@@ -1,0 +1,22 @@
+<html>
+  <div>
+    45. Write a JavaScript program to split values into two groups, if an
+    element in filter is truthy, the corresponding element in the collection
+    belongs to the first group; otherwise, it belongs to the second group.
+  </div>
+  <script>
+    function newArr(...args) {
+      let arr2 = [];
+      let arr1 = args.filter((value) => {
+        if (value == (NaN | null | undefined | "" | false | 0 | -0))
+          arr2.push(value);
+        return value;
+      });
+      let arr3 = [];
+      arr3.push(arr1, arr2);
+      return arr3;
+    }
+
+    console.log(newArr(1, 4, 6, 0, 5, ""));
+  </script>
+</html>

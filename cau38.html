@@ -1,0 +1,16 @@
+<html>
+  <div>
+    38. Write a JavaScript program to pad a string on both sides with the
+    specified character, if it's shorter than the specified length.
+  </div>
+  <script>
+    function insertPad(str, length, char = " ") {
+      let str2 = str
+        .padStart((str.length + length) / 2, char)
+        .padEnd(length, char);
+      return str2;
+    }
+
+    console.log(insertPad("foob", 8));
+  </script>
+</html>

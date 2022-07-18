@@ -1,0 +1,14 @@
+<html>
+  <div>
+    23. Write a JavaScript program to filter out the non-unique values in an
+    array, based on a provided comparator function.
+  </div>
+  <script>
+    function ques23(arr, func) {
+      let arr2 = arr.filter((value, index) => arr.every((x) => func(value)));
+      return arr2;
+    }
+
+    console.log(ques23([1, 2, 3, 4, 8, 9, 10], (a) => a > 2)); // 3,4,8,9,10
+  </script>
+</html>
